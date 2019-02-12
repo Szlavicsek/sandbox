@@ -1,0 +1,39 @@
+.siema_item {
+  width: 100vw;
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+#si1 {
+  background-image: url("../../images/si1.jpeg");
+}
+
+#si2 {
+  background-image: url("../../images/si2.jpeg");
+}
+
+#si3 {
+  background-image: url("../../images/si3.jpeg");
+}
+
+#si4 {
+  background-image: url("../../images/si4.jpeg");
+}
+
+.carouselButtons_wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.carouselButton {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
