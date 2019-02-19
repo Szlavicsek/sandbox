@@ -1,9 +1,26 @@
+.carousel_wrapper {
+  display: block;
+  height: 100%;
+  background-color: grey;
+}
+
+.siema_wrapper {
+  //position: relative;
+  height: auto;
+  background-color: yellow;
+}
+
 .siema_item {
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
+  cursor: default;
+}
+
+#si0 {
+  background-image: url("../../images/si2.jpeg");
 }
 
 #si1 {
@@ -11,14 +28,10 @@
 }
 
 #si2 {
-  background-image: url("../../images/si2.jpeg");
-}
-
-#si3 {
   background-image: url("../../images/si3.jpeg");
 }
 
-#si4 {
+#si3 {
   background-image: url("../../images/si4.jpeg");
 }
 
@@ -29,11 +42,8 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.carouselButton {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  height: 100px;
+  width: 20px;
+  justify-content: space-between;
+  background-color: orange;
 }

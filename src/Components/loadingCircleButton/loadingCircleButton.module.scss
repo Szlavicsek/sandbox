@@ -1,0 +1,40 @@
+.progressCircle {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.round_progress {
+  position: absolute;
+  top:-5px;
+  left:-5px;
+  transform: scale(1.2);
+}
+
+.owl_carousel_navigation {
+  vertical-align: middle;
+}
+
+.owl_next {
+  transform: scale(0.3);
+  position: relative;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  padding: 10px 10px 9px 10px;
+  background-color: #FFF;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
+}
+
+.carouselButton {
+
+}
+
+:global(.carouselButton_active) {
+
+}

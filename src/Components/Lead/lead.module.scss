@@ -1,3 +1,13 @@
+#lead {
+  height: 100vh;
+  transition: all 1s;
+  position: relative;
+}
+
+.shrinked {
+  height: 400px !important;
+}
+
 .header {
   width: 100vw;
   position: absolute;
@@ -35,8 +45,6 @@
     text-decoration: none;
   }
 }
-
-
 
 @media (min-width: 768px) and (max-width:1280px) {
   width: 4vw;
