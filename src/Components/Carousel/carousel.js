@@ -7,11 +7,12 @@ import CircleButton from '../loadingCircleButton/loadingCircleButton'
 const Slide = (props) => <div {...props}></div>;
 
 const carouselButtonClicked = (e, slider) => {
+    console.log(e)
     slider.goTo(e.target.id)
     Array.from(document.querySelectorAll(".c-button")).forEach((x, i)=> {
-        x.classList.remove("carouselButton_active");
+        x.classList.remove("owl_next--active");
     });
-    e.target.classList.add("carouselButton_active");
+    e.target.classList.add("owl_next--active");
 };
 
 const Carousel = () => {
@@ -27,24 +28,20 @@ const Carousel = () => {
         loop: false
     };
 
-    const steil = {
-        height: "100%",
-        backgroundColor: "green"
-    }
     btn.next(5); // ez mindig meghívódik, fix it
-
+    // + click eventet működésre bírni
 
     let slider
 
     return (
         <div className={styles.carousel_wrapper}>
-            <ReactSiema style={steil} {...options} ref={siema => slider = siema}>
+            <ReactSiema {...options} ref={siema => slider = siema}>
                 <Slide className={styles.siema_item} id={styles.si0} />
                 <Slide className={styles.siema_item} id={styles.si1} />
                 <Slide className={styles.siema_item} id={styles.si2} />
                 <Slide className={styles.siema_item} id={styles.si3} />
             </ReactSiema>
-            <div className={styles.carouselButtons_wrapper}>
+           <div className={styles.carouselButtons_wrapper}>
                 <CircleButton id="1" onClick={(e) => carouselButtonClicked(e, slider)} />
                 <CircleButton id="2" onClick={(e) => carouselButtonClicked(e, slider)} />
                 <CircleButton id="3" onClick={(e) => carouselButtonClicked(e, slider)} />

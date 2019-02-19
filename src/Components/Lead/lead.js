@@ -5,7 +5,8 @@ import { Link, withRouter } from "react-router-dom";
 
 class Lead extends Component {
     state = {
-        MousewheelWasScrolled: false
+        MousewheelWasScrolled: false,
+
     };
 
     preventDefault(e) {

@@ -22,19 +22,20 @@
   -moz-border-radius: 30px;
   border-radius: 30px;
   padding: 10px 10px 9px 10px;
-  background-color: #FFF;
+  background-color: #ddd;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   display: inline-block;
+  transition: all .3s;
+  &:hover {
+    background-color: #fff;
+    cursor: pointer
+  }
 }
 
-.carouselButton {
-
-}
-
-:global(.carouselButton_active) {
-
+:global(.owl_next--active) {
+  background-color: #fff;
 }
