@@ -4,7 +4,7 @@ let btn = {
     'afterburn' : -1,
     'stopped' : 0,
     'next' : function(sec) {  //right-bottom circular effect
-        if (btn.stopped==1) {
+        if (btn.stopped===1) {
             return false;
         }
         if (typeof btnAnim !== 'undefined'){
@@ -27,7 +27,7 @@ let btn = {
             if (document.querySelector('#prog01 #arc1')) {
                 document.querySelector('#prog01 #arc1').setAttribute("d", btn.describeArc(27, 27, 25, btn.afterburn, btn.progress));
             }
-        }, 50);
+        }, 40);
     },
     'polarToCartesian' : function(centerX, centerY, radius, angleInDegrees) {
         let angleInRadians = (angleInDegrees-90) * Math.PI / 180.0;
@@ -54,7 +54,7 @@ let btn = {
         //     clearInterval(timerId);
         // }
 
-        document.querySelector('#prog01 #arc1').setAttribute("d", btn.describeArc(25, 25, 25, btn.afterburn, -1));
+        // document.querySelector('#prog01 #arc1').setAttribute("d", btn.describeArc(25, 25, 25, btn.afterburn, -1));
         btn.stopped=1;
     },
 };

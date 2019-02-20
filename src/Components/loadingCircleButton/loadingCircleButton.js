@@ -6,7 +6,7 @@ const CircleButton = () => {
     return (
         <div className={styles.progressCircle}>
             <div className={`c-button ${styles.owl_next}`}>
-                <img src={button} className={styles.owl_carousel_navigation} />
+                <img src={button} className={styles.owl_carousel_navigation} alt="carousel-navigation" />
                 <svg id="prog01" className={styles.round_progress} xmlns="http://www.w3.org/2000/svg" width="55"
                      height="55">
                     <path id="arc1" fill="none" stroke="#fff" strokeWidth="4"/>
