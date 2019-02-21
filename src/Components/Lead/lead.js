@@ -85,7 +85,7 @@ class Lead extends Component {
                     </div>
                 </header>
                 <Carousel
-                scrolled={this.props.MousewheelWasScrolled}/>
+                scrolled={this.state.MousewheelWasScrolled}/>
             </div>
         );
     }

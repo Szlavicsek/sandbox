@@ -1,31 +1,32 @@
 let btn = {
     'progress' : -1,
-    'circleStat' : 0,
     'afterburn' : -1,
     'stopped' : 0,
-    'next' : function(sec) {  //right-bottom circular effect
+    "svgSelector": undefined,
+    "btnAnim": undefined,
+    'next' : function(sec, loadNext) {
         if (btn.stopped===1) {
             return false;
         }
-        if (typeof btnAnim !== 'undefined'){
-            clearInterval(btn.btnAnim)
-        }
+
+        clearInterval(btn.btnAnim);
+
         btn.btnAnim = setInterval(function () {
             if (btn.progress < 347) {
                 btn.progress = btn.progress < 358 ? btn.progress + (10/sec) : 0
             } else {
                 btn.progress = btn.progress < 358 ? btn.progress + .5 : 0
             }
-            if (btn.progress >= 358) {
-                //kövi slide funkciója
-            }
             if (btn.progress >= 347) {
                 btn.afterburn = btn.afterburn + 16;
             } else {
                 btn.afterburn = -1
             }
-            if (document.querySelector('#prog01 #arc1')) {
-                document.querySelector('#prog01 #arc1').setAttribute("d", btn.describeArc(27, 27, 25, btn.afterburn, btn.progress));
+            if (document.querySelector('.active .circleStroke')) {
+                document.querySelector('.active .circleStroke').setAttribute("d", btn.describeArc(27, 27, 25, btn.afterburn, btn.progress));
+            }
+            if (btn.progress >= 358) {
+                loadNext()
             }
         }, 40);
     },
@@ -53,9 +54,8 @@ let btn = {
         // if (typeof timerId !== 'undefined') {
         //     clearInterval(timerId);
         // }
-
-        // document.querySelector('#prog01 #arc1').setAttribute("d", btn.describeArc(25, 25, 25, btn.afterburn, -1));
-        btn.stopped=1;
+        // document.querySelector('.active .circleStroke').setAttribute("d", btn.describeArc(25, 25, 25, btn.afterburn, -1));
+        // btn.stopped=1;
     },
 };
 

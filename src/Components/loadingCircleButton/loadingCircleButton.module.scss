@@ -39,3 +39,11 @@
 :global(.owl_next--active) {
   background-color: #fff;
 }
+
+:global(.activeOwlNext) {
+  background-color: #fff;
+}
+
+:global(.hidden) {
+  display: none
+}
