@@ -23,43 +23,56 @@ class Carousel extends Component {
 
         if (!this.state.nextButtonDisabled) {
             // Ha már letelt a 750ms-os zár
+            if (!event || Number(event.target.id) !== this.state.activeSlideId) {
+                let updatedActiveSlideId;
 
-            if (event && Number(event.target.id) === this.state.activeSlideId) {
-                // Ha az éppen menő slide gombjára lett kattintva
-                // console.log('clicked but on the same button')
+                if (event) {
+                    updatedActiveSlideId = Number(event.target.id);
+                    // a jelenleg elöl lévőnek marad a legmagasabb a z indexe
+
+                    // ezé jön egyel azután
+
+                    // 1500ms után lesz ez a legmagasabb
 
 
-            } else if (event) {
-                // Ha másra kattintottunk mint az éppen menő
-                // console.log('clicked, not the same')
-
-
-            } else {
-                //magától meghívódik
-                console.log("not event")
-                const updatedActiveSlideId = this.state.activeSlideId === this.backgrounds.length-1 ? 0 : this.state.activeSlideId + 1
+                } else {
+                    //magától meghívódik
+                    console.log("not event")
+                    updatedActiveSlideId = this.state.activeSlideId === this.backgrounds.length-1 ? 0 : this.state.activeSlideId + 1;
+                }
 
                 this.setState((state) => ({
                     activeSlideId: updatedActiveSlideId
                 }));
 
+                const $currentSlide = this.refs[this.state.activeSlideId];
+                const $prevSlide = this.refs[this.state.activeSlideId-1];
 
-                console.log(this.state.activeSlideId)
+                $currentSlide.style.transform = "translateX(-100%)";
+
+                console.log(this.state.activeSlideId);
 
 
+                this.setState((state) => ({
+                    nextButtonDisabled: true
+                }));
+
+                setTimeout(function () {
+                    this.setState((state) => ({
+                        nextButtonDisabled: false
+                    }));
+                }.bind(this), 750) // a transition fele
+
+                setTimeout(function () {
+                    $prevSlide.style.tranition = "transform 0s";
+                    $prevSlide.style.transform = "translateX(20%)";
+                    $prevSlide.style.transform = "transform cubic-bezier(.12,.77,.33,.96) 1.5s;";
+
+                }.bind(this), 1500)
             }
 
 
 
-            this.setState((state) => ({
-                nextButtonDisabled: true
-            }));
-
-            setTimeout(function () {
-                this.setState((state) => ({
-                    nextButtonDisabled: false
-                }));
-            }.bind(this), 750) // a transition fele
 
         }
     }
