@@ -14,7 +14,8 @@ class Carousel extends Component {
         super(props);
         this.backgrounds = [bg0, bg1, bg2, bg3, bg4, bg5];
         this.state = {
-            activeSlideId: 0,
+            highscore: 5,
+            currentSlideId: 0,
             nextButtonDisabled: false,
         }
     }
@@ -23,56 +24,60 @@ class Carousel extends Component {
 
         if (!this.state.nextButtonDisabled) {
             // Ha már letelt a 750ms-os zár
-            if (!event || Number(event.target.id) !== this.state.activeSlideId) {
-                let updatedActiveSlideId;
+
+            btn.afterburn = -1;
+            btn.progress = -1;
+
+
+            if (!event || Number(event.target.id) !== this.state.currentSlideId) {
+                let updatedCurrentSlideId;
+                const previousSlideId = this.state.currentSlideId;
 
                 if (event) {
-                    updatedActiveSlideId = Number(event.target.id);
-                    // a jelenleg elöl lévőnek marad a legmagasabb a z indexe
-
-                    // ezé jön egyel azután
-
-                    // 1500ms után lesz ez a legmagasabb
-
+                    updatedCurrentSlideId = Number(event.target.id);
 
                 } else {
                     //magától meghívódik
-                    console.log("not event")
-                    updatedActiveSlideId = this.state.activeSlideId === this.backgrounds.length-1 ? 0 : this.state.activeSlideId + 1;
+                    updatedCurrentSlideId = this.state.currentSlideId === this.backgrounds.length-1 ? 0 : this.state.currentSlideId + 1;
+                }
+                const updatedZIndex = this.state.highscore + 1;
+
+                const setStuff = () => {
+
+                    const $prevSlide_inner = this.refs["inner" + previousSlideId];
+                    const $prevSlide_outer = this.refs["outer" + previousSlideId];
+                    const $currentSlide_inner = this.refs["inner" + this.state.currentSlideId];
+                    const $currentSlide_outer = this.refs["outer" + this.state.currentSlideId];
+
+
+                    $currentSlide_inner.style.transform = "translateX(0)";
+                    $currentSlide_inner.style.transition = "transform cubic-bezier(.12,.77,.33,.96) 1.5s, width 1.5s";
+                    $prevSlide_inner.style.transform = "translateX(-20%)";
+                    $prevSlide_inner.style.width = "0%";
+
+                    setTimeout(function () {
+
+                        $prevSlide_inner.style.transition = "transform 0s";
+                        $prevSlide_inner.style.transform = "translateX(20%)";
+                        $prevSlide_inner.style.width = "100%";
+
+
+                        $prevSlide_outer.style.highscore = this.state.zIndex;
+
+                        this.setState({
+                            nextButtonDisabled: false
+                        });
+
+                    }.bind(this), 1500)
                 }
 
-                this.setState((state) => ({
-                    activeSlideId: updatedActiveSlideId
-                }));
+                this.setState({
+                    currentSlideId: updatedCurrentSlideId,
+                    nextButtonDisabled: true,
+                    highscore: updatedZIndex
+                }, setStuff);
 
-                const $currentSlide = this.refs[this.state.activeSlideId];
-                const $prevSlide = this.refs[this.state.activeSlideId-1];
-
-                $currentSlide.style.transform = "translateX(-100%)";
-
-                console.log(this.state.activeSlideId);
-
-
-                this.setState((state) => ({
-                    nextButtonDisabled: true
-                }));
-
-                setTimeout(function () {
-                    this.setState((state) => ({
-                        nextButtonDisabled: false
-                    }));
-                }.bind(this), 750) // a transition fele
-
-                setTimeout(function () {
-                    $prevSlide.style.tranition = "transform 0s";
-                    $prevSlide.style.transform = "translateX(20%)";
-                    $prevSlide.style.transform = "transform cubic-bezier(.12,.77,.33,.96) 1.5s;";
-
-                }.bind(this), 1500)
             }
-
-
-
 
         }
     }
@@ -80,7 +85,7 @@ class Carousel extends Component {
 
 
     componentDidMount() {
-        btn.next(7, this.loadNext.bind(this));
+        btn.next(3, this.loadNext.bind(this));
     }
 
 
@@ -99,21 +104,53 @@ class Carousel extends Component {
         return (
             <div className={styles.carousel_wrapper}>
                 <div className={styles.carouselImagesWrapper}>
-                    <div ref="0" className={styles.lead_image} style={{ zIndex: 6, backgroundImage: `url(${this.backgrounds[0]})`, transform: 'translateX(0)'} }></div>
-                    <div ref="1" className={styles.lead_image} style={{ zIndex: 5, backgroundImage: `url(${this.backgrounds[1]})`, transform: 'translateX(20%)'} }></div>
-                    <div ref="2" className={styles.lead_image} style={{ zIndex: 4, backgroundImage: `url(${this.backgrounds[2]})`, transform: 'translateX(20%)'} }></div>
-                    <div ref="3" className={styles.lead_image} style={{ zIndex: 3, backgroundImage: `url(${this.backgrounds[3]})`, transform: 'translateX(20%)'} }></div>
-                    <div ref="4" className={styles.lead_image} style={{ zIndex: 2, backgroundImage: `url(${this.backgrounds[4]})`, transform: 'translateX(20%)'} }></div>
-                    <div ref="5" className={styles.lead_image} style={{ zIndex: 1, backgroundImage: `url(${this.backgrounds[5]})`, transform: 'translateX(20%)'} }></div>
+
+                    <div ref="outer0" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner0" className="container" style={{transform: "translateX(0%)"}}>
+                            <img className="image" src={this.backgrounds[0]} style={{visibility: "visible"}} alt="lead0" />
+                        </div>
+                    </div>
+
+                    <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "4"}}>
+                        <div ref="inner1" className="container" style={{transform: "translateX(20%)"}}>
+                            <img className="image" src={this.backgrounds[1]} style={{visibility: "visible"}} alt="lead1" />
+                        </div>
+                    </div>
+
+                    <div ref="outer2" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "3"}}>
+                        <div ref="inner2" className="container" style={{transform: "translateX(20%)"}}>
+                            <img className="image" src={this.backgrounds[2]} style={{visibility: "visible"}} alt="lead2" />
+                        </div>
+                    </div>
+
+                    <div ref="outer3" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "2"}}>
+                        <div ref="inner3" className="container" style={{transform: "translateX(20%)"}}>
+                            <img className="image" src={this.backgrounds[3]} style={{visibility: "visible"}} alt="lead3" />
+                        </div>
+                    </div>
+
+                    <div ref="outer4" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "1"}}>
+                        <div ref="inner4" className="container" style={{transform: "translateX(20%)"}}>
+                            <img className="image" src={this.backgrounds[4]} style={{visibility: "visible"}} alt="lead4" />
+                        </div>
+                    </div>
+
+                    <div ref="outer5" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "0"}}>
+                        <div ref="inner5" className="container" style={{transform: "translateX(20%)"}}>
+                            <img className="image" src={this.backgrounds[5]} style={{visibility: "visible"}} alt="lead5" />
+                        </div>
+                    </div>
+
                 </div>
+
                 <div className={styles.carouselButtons_wrapper}>
 
-                    <CircleButton id="0" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
-                    <CircleButton id="1" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
-                    <CircleButton id="2" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
-                    <CircleButton id="3" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
-                    <CircleButton id="4" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
-                    <CircleButton id="5" activeSlideId={this.state.activeSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="0" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="1" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="2" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="3" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="4" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
+                    <CircleButton id="5" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
                 </div>
             </div>
         );
