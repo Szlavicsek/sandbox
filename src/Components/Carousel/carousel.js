@@ -45,7 +45,7 @@ class Carousel extends Component {
                     $frontSide_inner.style.transition = "width 0s, transform 0s";
                     $backSide_inner.style.transition = "width 0s, transform 0s";
                     $frontSide_inner.style.transform = "translateX(0%)";
-                    // $frontSide_inner.style.width = "100%";
+                    $frontSide_inner.style.width = "100%";
                     this.refs.img0.setAttribute("src", this.backgrounds[previousSlideId]);
                     this.refs.img1.setAttribute("src", this.backgrounds[this.state.currentSlideId]);
                     $backSide_inner.style.transform = "translateX(10%)";
@@ -53,10 +53,13 @@ class Carousel extends Component {
                     setTimeout(function () {
                         $frontSide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
                         $backSide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
-                        $frontSide_inner.style.transform = "translateX(-100%)";
-                        // $frontSide_inner.style.width = "0%";
+                        $frontSide_inner.style.transform = "translateX(-10%)";
+                        $frontSide_inner.style.width = "0%";
                         $backSide_inner.style.transform = "translateX(0%)";
                     }, 30)
+
+
+
                 };
 
                 this.setState({
