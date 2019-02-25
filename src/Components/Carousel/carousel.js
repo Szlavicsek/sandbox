@@ -14,71 +14,75 @@ class Carousel extends Component {
         super(props);
         this.backgrounds = [bg0, bg1, bg2, bg3, bg4, bg5];
         this.state = {
-            highscore: 5,
+            topZIndex: 10,
             currentSlideId: 0,
             nextButtonDisabled: false,
+            leadHistory: [0];
         }
     }
 
     loadNext(event) {
 
         if (!this.state.nextButtonDisabled) {
-            // Ha már letelt a 750ms-os zár
-
+            // Ha már letelt az 1500ms-os zár
             btn.afterburn = -1;
             btn.progress = -1;
 
 
             if (!event || Number(event.target.id) !== this.state.currentSlideId) {
                 let updatedCurrentSlideId;
+                const updatedHistory = [];
                 const previousSlideId = this.state.currentSlideId;
 
                 if (event) {
                     updatedCurrentSlideId = Number(event.target.id);
-
                 } else {
-                    //magától meghívódik
                     updatedCurrentSlideId = this.state.currentSlideId === this.backgrounds.length-1 ? 0 : this.state.currentSlideId + 1;
                 }
-                const updatedZIndex = this.state.highscore + 1;
+
+                updatedHistory.push(updatedCurrentSlideId)
+                const updatedTopZIndex = this.state.topZIndex + 1;
 
                 const setStuff = () => {
 
                     const $prevSlide_inner = this.refs["inner" + previousSlideId];
-                    const $prevSlide_outer = this.refs["outer" + previousSlideId];
                     const $currentSlide_inner = this.refs["inner" + this.state.currentSlideId];
+                    const $prevSlide_outer = this.refs["outer" + previousSlideId];
                     const $currentSlide_outer = this.refs["outer" + this.state.currentSlideId];
 
-
+                    //styling
                     $currentSlide_inner.style.transform = "translateX(0)";
-                    $currentSlide_inner.style.transition = "transform cubic-bezier(.12,.77,.33,.96) 1.5s, width 1.5s";
-                    $prevSlide_inner.style.transform = "translateX(-20%)";
+                    $currentSlide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
+                    $prevSlide_inner.style.transform = "translateX(-10%)";
                     $prevSlide_inner.style.width = "0%";
 
+                    $prevSlide_outer.style.zIndex = this.state.topZIndex;
+                    $currentSlide_outer.style.zIndex = this.state.topZIndex -1;
+
                     setTimeout(function () {
-
-                        $prevSlide_inner.style.transition = "transform 0s";
-                        $prevSlide_inner.style.transform = "translateX(20%)";
-                        $prevSlide_inner.style.width = "100%";
-
-
-                        $prevSlide_outer.style.highscore = this.state.zIndex;
-
                         this.setState({
                             nextButtonDisabled: false
                         });
+                    }.bind(this), 750)
+
+                    setTimeout(function () {
+                        $prevSlide_inner.style.transition = "transform 0s";
+                        $prevSlide_inner.style.transform = "translateX(10%)";
+                        $prevSlide_inner.style.width = "100%";
+
+                        $prevSlide_outer.style.zIndex = 2;
+                        $currentSlide_outer.style.zIndex = this.state.topZIndex;
 
                     }.bind(this), 1500)
-                }
+                };
 
                 this.setState({
                     currentSlideId: updatedCurrentSlideId,
                     nextButtonDisabled: true,
-                    highscore: updatedZIndex
+                    topZIndex: updatedTopZIndex,
+                    leadHistory: updatedHistory
                 }, setStuff);
-
             }
-
         }
     }
 
@@ -87,11 +91,6 @@ class Carousel extends Component {
     componentDidMount() {
         btn.next(3, this.loadNext.bind(this));
     }
-
-
-    // btn.stop()
-    // + click eventet működésre bírni
-
 
     render() {
 
@@ -105,39 +104,39 @@ class Carousel extends Component {
             <div className={styles.carousel_wrapper}>
                 <div className={styles.carouselImagesWrapper}>
 
-                    <div ref="outer0" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                    <div ref="outer0" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "10"}}>
                         <div ref="inner0" className="container" style={{transform: "translateX(0%)"}}>
                             <img className="image" src={this.backgrounds[0]} style={{visibility: "visible"}} alt="lead0" />
                         </div>
                     </div>
 
-                    <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "4"}}>
-                        <div ref="inner1" className="container" style={{transform: "translateX(20%)"}}>
+                    <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner1" className="container" style={{transform: "translateX(10%)"}}>
                             <img className="image" src={this.backgrounds[1]} style={{visibility: "visible"}} alt="lead1" />
                         </div>
                     </div>
 
-                    <div ref="outer2" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "3"}}>
-                        <div ref="inner2" className="container" style={{transform: "translateX(20%)"}}>
+                    <div ref="outer2" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner2" className="container" style={{transform: "translateX(10%)"}}>
                             <img className="image" src={this.backgrounds[2]} style={{visibility: "visible"}} alt="lead2" />
                         </div>
                     </div>
 
-                    <div ref="outer3" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "2"}}>
-                        <div ref="inner3" className="container" style={{transform: "translateX(20%)"}}>
-                            <img className="image" src={this.backgrounds[3]} style={{visibility: "visible"}} alt="lead3" />
+                    <div ref="outer3" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner3" className="container" style={{transform: "translateX(10%)"}}>
+                            <img className="image" src={this.backgrounds[3]} style={{visibility: "visible"}} alt="lead0" />
                         </div>
                     </div>
 
-                    <div ref="outer4" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "1"}}>
-                        <div ref="inner4" className="container" style={{transform: "translateX(20%)"}}>
-                            <img className="image" src={this.backgrounds[4]} style={{visibility: "visible"}} alt="lead4" />
+                    <div ref="outer4" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner4" className="container" style={{transform: "translateX(10%)"}}>
+                            <img className="image" src={this.backgrounds[4]} style={{visibility: "visible"}} alt="lead1" />
                         </div>
                     </div>
 
-                    <div ref="outer5" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "0"}}>
-                        <div ref="inner5" className="container" style={{transform: "translateX(20%)"}}>
-                            <img className="image" src={this.backgrounds[5]} style={{visibility: "visible"}} alt="lead5" />
+                    <div ref="outer5" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner5" className="container" style={{transform: "translateX(10%)"}}>
+                            <img className="image" src={this.backgrounds[5]} style={{visibility: "visible"}} alt="lead2" />
                         </div>
                     </div>
 
