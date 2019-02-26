@@ -20,7 +20,7 @@ class Carousel extends Component {
 
     loadNext(event) {
 
-        if (/*!event || Number(event.target.id) !== this.state.currentSlideId */ event) {
+        if (!event || Number(event.target.id) !== this.state.currentSlideId ) {
             btn.afterburn = -1;
             btn.progress = -1;
 
@@ -32,7 +32,6 @@ class Carousel extends Component {
             } else {
                 updatedCurrentSlideId = this.state.currentSlideId === this.backgrounds.length-1 ? 0 : this.state.currentSlideId + 1;
             }
-            updatedCurrentSlideId = this.state.currentSlideId === this.backgrounds.length-1 ? 0 : this.state.currentSlideId + 1;
 
 
 
@@ -109,7 +108,6 @@ class Carousel extends Component {
                 </div>
 
                 <div className={`${styles.carouselButtons_wrapper} ${this.props.scrolled ? styles.hiddenControls : ""}`}>
-
                     <CircleButton id="0" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
                     <CircleButton id="1" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />
                     <CircleButton id="2" activeSlideId={this.state.currentSlideId} click={(e) => this.loadNext(e)} />

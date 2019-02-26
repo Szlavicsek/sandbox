@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js" line="124" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js" line="122" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19dd2a6f-8c67-43c0-bfe5-b49958d01ed6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Routes/Contact/contact.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Carousel/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Agency/agency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/Agency/agency.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Agency/agency.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/Agency/agency.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Contact/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/Contact/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Contact/contact.modules.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Works/works.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/Works/works.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes/Works/works.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes/Works/works.module.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+            <state relative-caret-position="189">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -105,7 +97,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="e376fccd25574632392bbd422419a37f53ea4b09" />
+        <entry key="$PROJECT_DIR$" value="64f39d230e2a0b0de559703c206751a06080259c" />
       </map>
     </option>
   </component>
@@ -347,11 +339,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551172617062</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v5 working with 2 divs, but still needs refinement">
+      <created>1551178157798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1551178157798</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172746000" />
+    <option name="totallyTimeSpent" value="172975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -391,7 +390,8 @@
     <MESSAGE value="working but laggy" />
     <MESSAGE value="v3 first commit" />
     <MESSAGE value="v4 first commit, seems ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="v4 first commit, seems ok" />
+    <MESSAGE value="v5 working with 2 divs, but still needs refinement" />
+    <option name="LAST_COMMIT_MESSAGE" value="v5 working with 2 divs, but still needs refinement" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build/index.html" />
@@ -568,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="65" column="25" selection-start-line="65" selection-start-column="25" selection-end-line="65" selection-end-column="25" />
+        <state relative-caret-position="189">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
