@@ -5,7 +5,7 @@ const Works = () => {
     return (
         <div className={styles.works}>
             <div className={styles.tabs}>
-                hello tab
+                hi this is works
             </div>
         </div>
     );

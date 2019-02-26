@@ -47,6 +47,7 @@
 
 :global(.lead) {
   position: absolute;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   transition: height 1s;
@@ -61,17 +62,10 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: all cubic-bezier(.1,.6,.3,.96) 1.5s;
-}
-
-:global(.image) {
-  position: absolute;
-  min-height: 100vh;
-  min-width: 100vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-size: cover
+  transition: transform cubic-bezier(.1,.6,.3,.96) 1.5s, width cubic-bezier(.1,.6,.3,.96) 1.5s;
+  background-size: 100vw;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hiddenControls {
