@@ -15,7 +15,7 @@ class Carousel extends Component {
         this.backgrounds = [bg0, bg1, bg2, bg3, bg4, bg5];
         this.state = {
             currentSlideId: 0,
-            nextButtonDisabled: false,
+            topZIndex: 10
         }
     }
 
@@ -30,6 +30,7 @@ class Carousel extends Component {
 
                 let updatedCurrentSlideId;
                 const previousSlideId = this.state.currentSlideId;
+                const updatedTopZIndex = this.state.topZIndex + 2
 
                 if (event) {
                     updatedCurrentSlideId = Number(event.target.id);
@@ -39,16 +40,19 @@ class Carousel extends Component {
 
                 const setStuff = () => {
 
-                    const $frontSide_inner = this.refs.inner0;
-                    const $backSide_inner = this.refs.inner1;
+
+
+                    const $frontSide_inner = this.refs["inner" + previousSlideId];
+                    const $backSide_inner = this.refs["inner" + this.state.currentSlideId];
 
                     $frontSide_inner.style.transition = "width 0s, transform 0s";
                     $backSide_inner.style.transition = "width 0s, transform 0s";
                     $frontSide_inner.style.transform = "translateX(0%)";
-                    $frontSide_inner.style.width = "100%";
-                    this.refs.img0.setAttribute("src", this.backgrounds[previousSlideId]);
-                    this.refs.img1.setAttribute("src", this.backgrounds[this.state.currentSlideId]);
                     $backSide_inner.style.transform = "translateX(10%)";
+                    $frontSide_inner.style.width = "100%";
+                    $backSide_inner.style.width = "100%";
+                    $frontSide_inner.style.zIndex = this.state.topZIndex
+                    $backSide_inner.style.zIndex = this.state.topZIndex-1
 
                     setTimeout(function () {
                         $frontSide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
@@ -56,14 +60,13 @@ class Carousel extends Component {
                         $frontSide_inner.style.transform = "translateX(-10%)";
                         $frontSide_inner.style.width = "0%";
                         $backSide_inner.style.transform = "translateX(0%)";
-                    }, 30)
-
-
+                    }, 10)
 
                 };
 
                 this.setState({
                     currentSlideId: updatedCurrentSlideId,
+                    topZIndex: updatedTopZIndex
                 }, setStuff);
             }
         }
@@ -91,15 +94,39 @@ class Carousel extends Component {
             <div className={styles.carousel_wrapper}>
                 <div className={styles.carouselImagesWrapper}>
 
-                    <div ref="outer0" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                    <div ref="outer0" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "10"}}>
                         <div ref="inner0" className="container" style={{transform: "translateX(0%)"}}>
                             <img ref="img0" className="image" src={this.backgrounds[0]} alt="lead0" />
                         </div>
                     </div>
 
-                    <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "4"}}>
+                    <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "9"}}>
                         <div ref="inner1" className="container" style={{transform: "translateX(10%)"}}>
                             <img ref="img1" className="image" src={this.backgrounds[1]} alt="lead1" />
+                        </div>
+                    </div>
+
+                    <div ref="outer2" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "8"}}>
+                        <div ref="inner2" className="container" style={{transform: "translateX(10%)"}}>
+                            <img ref="img2" className="image" src={this.backgrounds[2]} alt="lead2" />
+                        </div>
+                    </div>
+
+                    <div ref="outer3" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "7"}}>
+                        <div ref="inner3" className="container" style={{transform: "translateX(10%)"}}>
+                            <img ref="img3" className="image" src={this.backgrounds[3]} alt="lead3" />
+                        </div>
+                    </div>
+
+                    <div ref="outer4" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "6"}}>
+                        <div ref="inner4" className="container" style={{transform: "translateX(10%)"}}>
+                            <img ref="img4" className="image" src={this.backgrounds[4]} alt="lead4" />
+                        </div>
+                    </div>
+
+                    <div ref="outer5" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
+                        <div ref="inner5" className="container" style={{transform: "translateX(10%)"}}>
+                            <img ref="img5" className="image" src={this.backgrounds[5]} alt="lead5" />
                         </div>
                     </div>
 
