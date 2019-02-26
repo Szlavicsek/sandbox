@@ -1,7 +1,6 @@
 .progressCircle {
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //position: relative;
+
 }
 
 .round_progress {
@@ -12,7 +11,7 @@
 }
 
 .owl_carousel_navigation {
-  vertical-align: middle;
+  vertical-align: middle; //kell
 }
 
 .owl_next {
@@ -22,6 +21,7 @@
   -moz-border-radius: 30px;
   border-radius: 30px;
   padding: 10px 10px 9px 10px;
+  margin-left: -10px;
   background-color: #999;
   -webkit-tap-highlight-color: transparent;
   -webkit-user-select: none;

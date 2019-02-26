@@ -67,6 +67,9 @@ class Lead extends Component {
         }
     }
 
+    componentDidMount() {
+
+    }
 
     render() {
         return (

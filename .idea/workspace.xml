@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js" line="122" mnemonic="6" />
+    <bookmark url="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js" line="181" mnemonic="6" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19dd2a6f-8c67-43c0-bfe5-b49958d01ed6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Carousel/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel/carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Lead/lead.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Lead/lead.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,10 +21,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            <state relative-caret-position="216">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -29,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="405">
+              <caret line="54" column="52" lean-forward="true" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -41,17 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JsModules/svg_circle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="675">
+              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -59,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="7" column="119" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
+            <state relative-caret-position="378">
+              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -68,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="54">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -130,17 +136,17 @@
         <option value="$PROJECT_DIR$/src/RouteContainer/routes.module.scss" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/JsModules/svg_circle.js" />
-        <option value="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.js" />
-        <option value="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Lead/lead.js" />
         <option value="$PROJECT_DIR$/src/Components/Lead/lead.module.scss" />
-        <option value="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" />
         <option value="$PROJECT_DIR$/src/Routes/Works/works.js" />
         <option value="$PROJECT_DIR$/src/Routes/Contact/contact.js" />
         <option value="$PROJECT_DIR$/src/Routes/Contact/contact.modules.scss" />
         <option value="$PROJECT_DIR$/src/Routes/Agency/agency.js" />
         <option value="$PROJECT_DIR$/src/Routes/Agency/agency.module.scss" />
         <option value="$PROJECT_DIR$/src/Routes/Works/works.module.scss" />
+        <option value="$PROJECT_DIR$/src/Components/Lead/lead.js" />
+        <option value="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss" />
+        <option value="$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.js" />
+        <option value="$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss" />
         <option value="$PROJECT_DIR$/src/Components/Carousel/carousel.js" />
       </list>
     </option>
@@ -177,11 +183,6 @@
             <path>
               <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
               <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -204,46 +205,6 @@
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Lead" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="loadingCircleButton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="JsModules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Agency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Contact" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sandbox" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sandbox" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Routes" type="462c0819:PsiDirectoryNode" />
-              <item name="Works" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -261,7 +222,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.21207659" />
   </component>
   <component name="RecentsManager">
@@ -303,6 +264,7 @@
       <workItem from="1550146388760" duration="44032000" />
       <workItem from="1550500963205" duration="13008000" />
       <workItem from="1550602919353" duration="5654000" />
+      <workItem from="1551178933568" duration="14098000" />
     </task>
     <task id="LOCAL-00001" summary="mobile performance tryout">
       <created>1550673300608</created>
@@ -346,17 +308,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551178157798</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="autoplay enabled">
+      <created>1551178200234</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1551178200234</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172975000" />
+    <option name="totallyTimeSpent" value="187281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21535982" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21858217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.249668" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -391,7 +360,8 @@
     <MESSAGE value="v3 first commit" />
     <MESSAGE value="v4 first commit, seems ok" />
     <MESSAGE value="v5 working with 2 divs, but still needs refinement" />
-    <option name="LAST_COMMIT_MESSAGE" value="v5 working with 2 divs, but still needs refinement" />
+    <MESSAGE value="autoplay enabled" />
+    <option name="LAST_COMMIT_MESSAGE" value="autoplay enabled" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build/index.html" />
@@ -401,13 +371,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../sitemap/node_modules/sitemap/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/Components/Section1/section1.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/carousel-button.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -433,12 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RouteContainer/routes.module.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RouteContainer/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -446,13 +403,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -470,16 +420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1998">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -531,45 +471,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.module.scss">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="216">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.js">
+    <entry file="file://$PROJECT_DIR$/src/RouteContainer/routes.module.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Section1/section1.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="7" column="119" selection-start-line="7" selection-start-column="119" selection-end-line="7" selection-end-column="119" />
+        <state relative-caret-position="54">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JsModules/svg_circle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
+        <state relative-caret-position="756">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Lead/lead.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/loadingCircleButton/loadingCircleButton.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        <state relative-caret-position="675">
+          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Carousel/carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="405">
+          <caret line="54" column="52" lean-forward="true" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

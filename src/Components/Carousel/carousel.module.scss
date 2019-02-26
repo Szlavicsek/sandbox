@@ -3,9 +3,8 @@
   background-color: grey;
 }
 
-.carouselImagesWrapper {
+.carousel_bg_and_controls {
   height: 100%;
-  background-color: coral;
 }
 
 .lead_image_wrapper__outer {
@@ -32,17 +31,16 @@
 }
 
 .carouselButtons_wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  z-index: 100;
-  right: 20px;
+  justify-content: space-between;
+  width: 20px;
+  height: auto;
   top: 50%;
   transform: translateY(-50%);
-  max-height: 100px;
-  width: 20px;
-  justify-content: space-between;
-  transition: opacity 1s;
+  margin: 0 20px 0 auto;
+  z-index: 1000000;
 }
 
 :global(.lead) {
@@ -57,17 +55,27 @@
   height: 40vh !important;
 }
 
-:global(.container) {
+.container {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: transform cubic-bezier(.1,.6,.3,.96) 1.5s, width cubic-bezier(.1,.6,.3,.96) 1.5s;
-  background-size: 100vw;
-  background-position: center center;
-  background-repeat: no-repeat;
+  transition: transform cubic-bezier(.6,.01,.43,1) 1.5s, height cubic-bezier(.6,.01,.43,1) 1.5s;
+}
+
+.contentMedia {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero_bg {
+  height: 100%
 }
 
 .hiddenControls {
-  opacity: 0;
+  opacity: 1;
 }
