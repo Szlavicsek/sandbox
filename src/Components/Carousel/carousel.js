@@ -21,21 +21,23 @@ class Carousel extends Component {
         super(props);
         this.backgrounds = [v0, v1, v2, v3, v4, v5];
         this.state = {
-            clickIsDisabled: false,
+            nextButtonDisabled: false,
             currentSlideId: 0,
             topZIndex: 10
         }
     }
 
     loadNext(event) {
-        if (!this.state.clickIsDisabled) {
+        if (!this.state.nextButtonDisabled) {
+            // Ha már letelt a 750ms-os zár
 
-            if (!event || Number(event.target.id) !== this.state.currentSlideId ) {
+            if (!event || Number(event.target.id) !== this.state.currentSlideId) {
                 btn.afterburn = -1;
                 btn.progress = -1;
 
                 let updatedCurrentSlideId;
                 const previousSlideId = this.state.currentSlideId;
+                const updatedTopZIndex = this.state.topZIndex + 2;
 
                 if (event) {
                     updatedCurrentSlideId = Number(event.target.id);
@@ -48,42 +50,28 @@ class Carousel extends Component {
                     const $frontSide_inner = this.refs["inner" + previousSlideId];
                     const $backSide_inner = this.refs["inner" + this.state.currentSlideId];
 
-                    const $frontSide_outer = this.refs["outer" + previousSlideId];
-                    const $backSide_outer = this.refs["outer" + this.state.currentSlideId];
 
-                    async function phase1(that) {
-                        $frontSide_inner.style.transition = "height 0s, transform 0s";
-                        $backSide_inner.style.transition = "transform 0s";
-                        $frontSide_outer.style.transition = "transform 0s";
 
-                        $frontSide_inner.style.transform = "translateY(0%)";
-                        $backSide_inner.style.transform = "translateY(10%)";
+                    setTimeout(function () {
+                        $frontSide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
+                        $backSide_inner.style.transition = "all cubic-bezier(.1,.6,.3,.96) 1.5s";
+                        $frontSide_inner.style.transform = "translateY(-10%)";
+                        $frontSide_inner.style.height = "0%";
+                        $backSide_inner.style.transform = "translateY(0%)";
+                    }, 10)
 
-                        $frontSide_outer.style.height = "100%";
-
-                        that.refs.hero0.setAttribute("src", that.backgrounds[previousSlideId])
-                        that.refs.hero1.setAttribute("src", that.backgrounds[that.state.currentSlideId])
-                    }
-
-                    function phase2() {
-                        setTimeout(function () {
-                            $frontSide_inner.style.transition = "height cubic-bezier(.6,.01,.43,1) 1.5s, transform cubic-bezier(.6,.01,.43,1) 1.5s";
-                            $frontSide_outer.style.transition = "height cubic-bezier(.6,.01,.43,1) 1.5s, transform cubic-bezier(.6,.01,.43,1) 1.5s";
-                            $backSide_inner.style.transition = "height cubic-bezier(.6,.01,.43,1) 1.5s, transform cubic-bezier(.6,.01,.43,1) 1.5s";
-
-                            $frontSide_inner.style.transform = "translateY(-10%)";
-                            $backSide_inner.style.transform = "translateY(0%)";
-
-                            $frontSide_outer.style.height = "0%";
-                        }, 30)
-                    }
-                    phase1(this).then(phase2)
+                    setTimeout(function () {
+                        this.setState((state) =>({
+                            nextButtonDisabled: false
+                        }))
+                    }.bind(this), 1500)
 
                 };
 
                 this.setState({
                     currentSlideId: updatedCurrentSlideId,
-                    clickIsDisabled: true
+                    topZIndex: updatedTopZIndex,
+                    nextButtonDisabled: true
                 }, setStuff);
             }
         }
@@ -124,7 +112,7 @@ class Carousel extends Component {
                     <div ref="outer1" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "9"}}>
                         <div ref="inner1" className={styles.container} style={{transform: "translateY(10%)"}}>
                             {/*<img ref="hero1" className={styles.contentMedia} src={this.backgrounds[1]} alt="hero2"/>*/}
-                            <video ref="hero1" className={styles.contentMedia} autoPlay>
+                            <video ref="hero1" className={styles.contentMedia}>
                                 <source src={this.backgrounds[1]} type="video/mp4" />
                             </video>
                         </div>
@@ -133,7 +121,7 @@ class Carousel extends Component {
                     <div ref="outer2" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "8"}}>
                         <div ref="inner2" className={styles.container} style={{transform: "translateY(10%)"}}>
                             {/*<img ref="hero0" className={styles.contentMedia} src={this.backgrounds[0]} alt="hero1"/>*/}
-                            <video ref="hero2" className={styles.contentMedia} autoPlay>
+                            <video ref="hero2" className={styles.contentMedia}>
                                 <source src={this.backgrounds[2]} type="video/mp4" />
                             </video>
                         </div>
@@ -142,7 +130,7 @@ class Carousel extends Component {
                     <div ref="outer3" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "7"}}>
                         <div ref="inner3" className={styles.container} style={{transform: "translateY(10%)"}}>
                             {/*<img ref="hero1" className={styles.contentMedia} src={this.backgrounds[1]} alt="hero2"/>*/}
-                            <video ref="hero3" className={styles.contentMedia} autoPlay>
+                            <video ref="hero3" className={styles.contentMedia}>
                                 <source src={this.backgrounds[3]} type="video/mp4" />
                             </video>
                         </div>
@@ -151,7 +139,7 @@ class Carousel extends Component {
                     <div ref="outer4" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "6"}}>
                         <div ref="inner4" className={styles.container} style={{transform: "translateY(10%)"}}>
                             {/*<img ref="hero0" className={styles.contentMedia} src={this.backgrounds[0]} alt="hero1"/>*/}
-                            <video ref="hero4" className={styles.contentMedia} autoPlay>
+                            <video ref="hero4" className={styles.contentMedia}>
                                 <source src={this.backgrounds[4]} type="video/mp4" />
                             </video>
                         </div>
@@ -160,7 +148,7 @@ class Carousel extends Component {
                     <div ref="outer5" className={`lead ${this.props.scrolled ? "shrinkedLeadWrapper" : ""}`} style={{zIndex: "5"}}>
                         <div ref="inner5" className={styles.container} style={{transform: "translateY(10%)"}}>
                             {/*<img ref="hero1" className={styles.contentMedia} src={this.backgrounds[1]} alt="hero2"/>*/}
-                            <video ref="hero5" className={styles.contentMedia} autoPlay>
+                            <video ref="hero5" className={styles.contentMedia}>
                                 <source src={this.backgrounds[5]} type="video/mp4" />
                             </video>
                         </div>
