@@ -10,10 +10,6 @@
   transform: scale(1.2);
 }
 
-.owl_carousel_navigation {
-  vertical-align: middle; //kell
-}
-
 .owl_next {
   transform: scale(0.3);
   position: relative;
@@ -29,18 +25,41 @@
   -ms-user-select: none;
   user-select: none;
   display: inline-block;
-  transition: all .3s;
+  transition: background-color 0.4s;
   &:hover {
     background-color: #fff;
     cursor: pointer
   }
 }
 
+:global(.circleStroke) {
+  transition: stroke 0.3s;
+  stroke: #fff;
+}
+
+.stroke_dark {
+  stroke: #232323
+}
+
+
+.owlNext_dark {
+  background-color: #4A4A4A;
+  &:hover {
+    background-color: #232323;
+  }
+}
+
+.owl_carousel_navigation {
+  vertical-align: middle; //kell
+  width: 24px;
+  height: 24px;
+}
+
 :global(.owl_next--active) {
   background-color: #fff;
 }
 
-:global(.activeOwlNext) {
+.activeOwlNext {
   background-color: #fff;
 }
 

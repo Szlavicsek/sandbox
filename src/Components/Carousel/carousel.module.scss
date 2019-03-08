@@ -43,6 +43,27 @@
   z-index: 1000000;
 }
 
+.carouselButtons_wrapper {
+  div:nth-child(1) > div {
+    transition-delay: 0.5s
+  }
+  div:nth-child(2) > div {
+    transition-delay: 0.4s
+  }
+  div:nth-child(3) > div {
+    transition-delay: 0.3s
+  }
+  div:nth-child(4) > div {
+    transition-delay: 0.2s
+  }
+  div:nth-child(5) > div {
+    transition-delay: 0.1s
+  }
+  div:nth-child(6) > div {
+    transition-delay: 0s
+  }
+}
+
 :global(.lead) {
   position: absolute;
   overflow: hidden;

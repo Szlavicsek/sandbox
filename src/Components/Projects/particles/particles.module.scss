@@ -1,0 +1,8 @@
+.renderContainer {
+   position: absolute;
+   min-height: 100vh;
+   min-width: 100vw;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }

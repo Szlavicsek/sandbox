@@ -6,7 +6,6 @@ import { Link, withRouter } from "react-router-dom";
 class Lead extends Component {
     state = {
         MousewheelWasScrolled: false,
-
     };
 
     preventDefault(e) {
@@ -76,7 +75,7 @@ class Lead extends Component {
             <div
                 onWheel={()=>this.onScrollHandler()}
                 id={styles.lead}
-                className={this.state.MousewheelWasScrolled ? styles.shrinked : ""}>
+                className={this.props.location.pathname !== "/" ? styles.shrinked : ""}>
                 <header className={styles.header}>
                     <div className={styles.inner}>
                         <Link onClick={()=>this.restoreScreenHeight()} className={styles.logo} to="/" />
@@ -85,10 +84,16 @@ class Lead extends Component {
                             <Link ref="agency" className={styles.link} to="/agency">Agency</Link>
                             <Link ref="contact" className={styles.link} to="/contact">Contact</Link>
                         </div>
+                        <div className={styles.hamburger}>
+
+                        </div>
+                        <div className={styles.mobile_menu}>
+
+                        </div>
                     </div>
                 </header>
                 <Carousel
-                scrolled={this.state.MousewheelWasScrolled}/>
+                shrinked={this.props.location.pathname !== "/" ? true : false}/>
             </div>
         );
     }
