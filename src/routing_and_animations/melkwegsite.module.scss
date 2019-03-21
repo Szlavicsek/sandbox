@@ -1,0 +1,99 @@
+//+++++++++++++++++++ENTER+++++++++++++++++++
+:global(.fade-enter) {
+  :global(.lead_background_media) {
+    opacity: 0;
+    z-index: 1;
+    transition: all 1s;
+  }
+
+  //:global(.lead_caption_container) {
+  //  opacity: 0;
+  //  height: 100vh;
+  //  z-index: 0;
+  //}
+  //
+  //:global(.lead_background_media) {
+  //  transition: opacity 1s;
+  //  opacity: 0;
+  //  z-index: 1;
+  //}
+  //
+  //:global(.lead_image) {
+  //  z-index: 2;
+  //  transform: translateY(-0%);
+  //  transition: transform .5s ease-out;
+  //  transition-delay: .5s;
+  //}
+
+}
+
+//+++++++++++++++++++ENTERING+++++++++++++++++++
+
+:global(.fade-enter-active) {
+  :global(.lead_background_media) {
+    opacity: 1;
+  }
+
+  //:global(.lead_background_media) {
+  //  opacity: 1;
+  //}
+  //
+  //:global(.lead_image) {
+  //  z-index: 2;
+  //  transform: translateY(-50%);
+  //}
+
+}
+
+//+++++++++++++++++++ENTERED+++++++++++++++++++
+
+:global(.fade-enter-done) {
+  :global(.lead_background_media) {
+  }
+}
+
+//************************************************************************************************************************
+//************************************************************************************************************************
+//************************************************************************************************************************
+
+
+//--------------------EXIT--------------------
+:global(.fade-exit) {
+  //:global(.lead_image) {
+  //  z-index: 2;
+  //  transform: translateY(-50%);
+  //  transition: transform .5s ease-in;
+  //}
+  //
+  //:global(.lead_caption_container) {
+  //  z-index: 2;
+  //}
+}
+
+//--------------------EXITING--------------------
+:global(.fade-exit.fade-exit-active) {
+  //:global(.lead_image) {
+  //  transform: translateY(0%);
+  //}
+}
+
+//--------------------EXITED--------------------
+:global(.fade-exit-done) {
+  //:global(.lead_image) {
+  //  z-index: 0;
+  //}
+  //
+  //:global(.lead_caption_container) {
+  //  z-index: 0;
+  //}
+}
+
+
+//
+//:global(.fade-appear) {
+//
+//}
+//
+//:global(.fade-appear-active) {
+//
+//}

@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import './App.css';
-import {BrowserRouter, Route } from 'react-router-dom'
-import Lead from './Components/Lead/lead'
-import Agency from "./Routes/Agency/agency";
-import Contact from "./Routes/Contact/contact";
-import Works from "./Routes/Works/works";
+import {BrowserRouter, Route} from 'react-router-dom';
+import './App.module.scss';
+import { createGlobalStyle } from 'styled-components'
+import myFont from './assets/fonts/avenirltce95black-webfont.woff2';
 
-class App extends Component {
+import Melkwegsite from './routing_and_animations/melkwegsite'
 
-    render() {
-        return (
+const App = _=>{
+
+    const GlobalStyle = createGlobalStyle`
+      @font-face {
+        font-family: 'Avenir-Black';
+        src: url(${myFont}) format('woff2');
+        font-weight: bold;
+        font-style: normal;
+      }
+    `;
+
+    return (
+        <>
+            <GlobalStyle />
             <BrowserRouter>
-                <div className="App">
-                    <Lead />
-                    <Route path="/agency" component={Agency} />
-                    <Route path="/contact" component={Contact} />
-                    <Route path="/works" component={Works} />
-                </div>
+                <Melkwegsite />
             </BrowserRouter>
-        );
-    }
-}
+        </>
+    );
+};
 
 export default App;

@@ -1,0 +1,162 @@
+{
+  "projects": {
+    "elmu": {
+      "title": "ELMŰ Redesign",
+      "subtitle": "UI/UX redesign",
+      "summary": "Redesigning one of Hungary’s biggest electricity and gas supplier website with its nearly 2 million user base was an outstanding project.",
+      "description": "On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website.",
+      "url": "www.elmuemasz.hu",
+      "client": "Elmű-Émász part of innogy",
+      "industry": "Energy Sector",
+      "agency": "Melkweg Digital",
+      "task": "Research, UX/UI design, Testing, Content management",
+      "year": "2017-2018",
+      "other_descriptions": ["On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website.", "On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website.", "On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website."],
+      "type": 0
+    },
+    "lufthansa": {
+      "title": "Lufthansa Systems Product design",
+      "subtitle": "Brand identity & UI/UX redesign",
+      "summary": "Lufthansa Systems is one of the world’s leading IT services provider in the aviation industry. Lufthansa's Crew Bid Manager software supports the entire crew management process, covering all phases from pairing construction to crew rostering, crew tracking and post-flight activities.",
+      "url": "www.lufthansa.com",
+      "client": "Lufthansa Systems",
+      "industry": "Aviation",
+      "agency": "Melkweg Digital",
+      "task": "UX/UI design",
+      "year": "2016",
+      "other_descriptions": ["On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website.", "On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website.", "On one hand the aim of the redesign was to adapt to the global brand appearance of the Innogy family, while on the other hand to create a modern, responsive environment. By melting together every background system into one, a single main site emerged where the online customer service page and other company pages are available. Furthermore, we aim to help users in achieving their goals by optimizing work processes and the structure of the new website."],
+      "type": 1
+    },
+  },
+  "team": {
+    "lead": [
+      {
+        "name": "Gergő Gazsi",
+        "position": "Managing Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Zoltán Beke",
+        "position": "Creative Director, Founder",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Gergely",
+        "position": "Technical Director",
+        "image_url": "../../images/profile1.png"
+      }
+    ],
+    "crew": [
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Robert Erdélyi",
+        "position": "Business Director",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "Balázs Szalai",
+        "position": "Business Director / Conent Specialist",
+        "image_url": "../../images/profile1.png"
+      },
+      {
+        "name": "László Schelhammer",
+        "position": "Account / Project Manager",
+        "image_url": "../../images/profile1.png"
+      }
+    ]
+  },
+  "jobs": [
+    "Backend Developer",
+    "Senior UX Designer"
+  ],
+  "job_carousel_images": [
+
+  ],
+  "brands": [
+
+  ],
+  "opinions": [
+    {
+      "client_name": "Peter Falk",
+      "client_title": "Marketing director at Profession.hu",
+      "client_image": "#",
+      "client_url_href": "#",
+      "client_url_name": "Profession.hu",
+      "opinion": "They’re very responsive and go above and beyond to meet our needs. We continue working with them, which is the best sign of our satisfaction."
+    }
+  ]
+}

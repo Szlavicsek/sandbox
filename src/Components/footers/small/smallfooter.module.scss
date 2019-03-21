@@ -1,0 +1,25 @@
+@import "../../../variables.module.scss";
+
+.footer {
+  width: 90%;
+  margin: 0 auto;
+  height: 10vh;
+  position: relative;
+  background-color: #29222F;
+}
+
+.bottom_left, .bottom_right {
+  font-size: 14px;
+  position: absolute;
+  bottom: 50px;
+}
+
+.bottom_left {
+  color: $light_font_color;
+  left: 0;
+}
+
+.bottom_right {
+  color: #999;
+  right: 0;
+}

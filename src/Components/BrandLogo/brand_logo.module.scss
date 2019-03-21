@@ -1,0 +1,19 @@
+.brand_logo_container {
+  position: relative;
+  width: 20%;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  height: 200px;
+}
+
+@media (max-width: 580px) {
+  .brand_logo_container {
+    height: 150px;
+  }
+}
+
+.brand_logo {
+  display: inline-block;
+  margin: 0 auto;
+}

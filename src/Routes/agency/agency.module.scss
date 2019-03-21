@@ -1,0 +1,150 @@
+@import "../../variables.module";
+
+//****************************************** STYLES APPLIED TO THE WHOLE PAGE ******************************************
+
+.inner {
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+}
+
+//*************************************************** SERVICES SECTION *************************************************
+
+.page_top {
+  height: 40vh;
+  background-color: #6E00FF;
+}
+
+.media_wrapper {
+  display: flex;
+  position: absolute;
+  height: 80vh;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.media_inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.agency_landing_image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.services_header {
+  margin: 0 auto;
+  text-align: center;
+  color: black;
+  padding-top: calc(40vh + 120px);
+  padding-bottom: 120px;
+  font-size: 60px;
+}
+
+.services_list_wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.services_box_inner {
+  margin: 0 auto;
+}
+
+.service_title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.service_list {
+  list-style: none;
+}
+
+.service_list_element {
+  position: relative;
+}
+
+.service_list_element > span {
+  color: #6E00FF;
+}
+
+.button {
+  display: block;
+  color: $light_font_color;
+  background-color: #6E00FF;
+  border-color: #6E00FF;
+  margin: 140px auto calc(45vh + 200px) auto;
+  &:hover {
+    background-color: $dark_purple;
+    border-color: $dark_purple;
+  }
+}
+
+//**************************************************** TEAM SECTION ****************************************************
+
+.whymelkweg {
+  height: 85vh;
+  width: 92%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  position: absolute;
+  background-color: $beige;
+}
+
+.team {
+  background-color: #29222F;
+  .inner {
+    padding-top: calc(25vw + 100px);
+  }
+}
+
+.why_header {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.team_header {
+  color: $light_font_color;
+  text-align: center;
+  margin: 180px;
+}
+
+.team_leaders_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team_members_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+//*************************************************** STORY SECTION ***************************************************
+
+.story_header {
+  font-size: 60px;
+  text-align: center;
+  margin: 150px 0 125px 0;
+  font-weight: bold;
+}
+
+.story_paragraph {
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  color: #000;
+  margin: 20px 20%;
+  &:last-child {
+    margin-top: 45px;
+    margin-bottom: 320px;
+  }
+}

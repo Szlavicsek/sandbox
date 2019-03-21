@@ -1,0 +1,93 @@
+@import "../../variables.module.scss";
+
+//***************************************** STYLES APPLIED TO BOTH CARD TYPES *****************************************
+
+.card_image {
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.card_image_title {
+  @include Avenir-Black;
+  font-size: $bolder_font_size;
+  line-height: 45px;
+  color: #FFF;
+}
+
+.card_image_subtitle {
+  @include Avenir-Roman;
+  font-size: $normal_font_size;
+  color: #999;
+}
+
+@media (max-width: 960px) {
+
+}
+@media (max-width: 720px) {
+
+}
+
+//************************************************** BIG CARD STYLES **************************************************
+
+.grid_item_big {
+  flex-basis: 33.333%;
+  -ms-flex: auto;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 130px;
+  .card_image_wrapper {
+    position: relative;
+    width: 24vw;
+    height: 34vw;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .card_image_text {
+    width: 24vw;
+    display: block;
+    margin: 30px auto 0 auto;
+  }
+    @media (max-width: 960px) {
+
+  }
+  @media (max-width: 720px) {
+
+  }
+}
+
+//************************************************* SMALL CARD STYLES *************************************************
+
+.grid_item_small {
+  width: 14vw;
+  flex-basis: 20%;
+  -ms-flex: auto;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 8%;
+  .card_image_wrapper {
+    margin: 0 auto;
+    position: relative;
+    width: 14vw;
+    height: 18vw;
+    overflow: hidden;
+  }
+  .card_image_text {
+    width: 14vw;
+    display: block;
+    margin: 30px auto 0 auto;
+  }
+  @media (max-width: 1200px) {
+
+  }
+  @media (max-width: 960px) {
+
+  }
+
+  @media (max-width: 720px) {
+
+  }
+}

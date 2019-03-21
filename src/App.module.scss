@@ -1,0 +1,55 @@
+@import "variables.module.scss";
+
+:global(h1) {
+  font-size: $lead_font_size;
+}
+
+:global(h2) {
+  font-size: $work_caption_size;
+}
+
+:global(h3) {
+  font-size: $bolder_font_size;
+}
+
+
+:global(p) {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  @media (max-width: 540px) {
+    font-size: 1rem;
+  }
+  &::selection {
+    color: $light_font_color;
+    background-color: $purple;
+  }
+}
+
+:global(span) {
+  font-size: 1.2rem;
+  @media (max-width: 540px) {
+    font-size: 1rem;
+  }
+}
+
+:global(a) {
+  color: $dark_font_color;
+  text-decoration: none;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//:global(a:hover) {
+//    color: $dark_font_color;
+//};
+//
+//:global(a:active) {
+//  color: $dark_font_color;
+//};
+//
+//:global(a:visited) {
+//  color: $dark_font_color;
+//};

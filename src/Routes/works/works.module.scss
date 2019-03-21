@@ -1,0 +1,122 @@
+@import "../../variables.module.scss";
+
+.works {
+  position: relative;
+  background-color: #241E29;
+}
+
+.inner {
+  position: relative;
+  width: 92%;
+  margin: 0 auto;
+}
+
+.lead {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  transform: translateY(-50%)
+}
+
+.lead_inner {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.lead_image {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+.lead_info {
+  position: absolute;
+  bottom: -30px;
+  left: 5%;
+  transform: translateY(100%);
+  display: block;
+}
+
+.lead_image_title, .work_image_title {
+  color: $light_font_color;
+}
+
+.lead_image_title {
+  @include Avenir-Black;
+  line-height: 45px;
+  font-size: $bolder_font_size;
+}
+
+.lead_image_subtitle {
+  font-size: $normal_font_size;
+  color: #999;
+}
+
+.works_grid_wrapper {
+  padding-top: calc(40vh + 200px);
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.works_bottom {
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.load_more {
+  color: $light_font_color;
+  background-color: #6E00FF;
+  border-color: #6E00FF;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.disclaimer {
+  @include Avenir-Roman;
+  font-style: $normal_font_size;
+  color: #999;
+  text-align: center;
+  width: 60%;
+  padding: 150px 0 230px 0;
+}
+
+.brands_wrapper {
+  position: relative;
+  background-color: #fff;
+}
+
+.brands_text {
+  @include Avenir-Black;
+  font-weight: 900;
+  text-align: center;
+  font-size: 60px;
+  padding: 140px;
+}
+
+.logo_grid_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+
+
+
+
+// SPINNER
+
+.spinner_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #211C25;
+}

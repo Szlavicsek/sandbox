@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import styles from './model.module.scss';
 import * as THREE from 'three';
 import {TweenLite, Power2, TimelineLite} from "gsap/TweenMax";
-import v0 from "../../../images/v1.mp4";
-import v1 from "../../../images/v2.mp4";
-import v2 from "../../../images/v3.mp4";
-import v3 from "../../../images/v4.mp4";
-import v4 from "../../../images/v5.mp4";
-import v5 from "../../../images/v6.mp4";
+import v0 from "../../../assets/images/v1.mp4";
+import v1 from "../../../assets/images/v2.mp4";
+import v2 from "../../../assets/images/v3.mp4";
+import v3 from "../../../assets/images/v4.mp4";
+import v4 from "../../../assets/images/v5.mp4";
+import v5 from "../../../assets/images/v6.mp4";
 
 class Morph extends Component {
     constructor(props) {

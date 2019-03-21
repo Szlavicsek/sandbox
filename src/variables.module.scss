@@ -1,0 +1,86 @@
+//@font-face {
+//  font-family: "Avenir-Black";
+//  src: url('/assets/fonts/avenirltce95black-webfont.eot'); /* IE9 Compat Modes */
+//  src: url('/assets/fonts/avenirltce95black-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('/assets/fonts/avenirltce95black-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('/assets/fonts/avenirltce95black-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: "Avenir-Heavy";
+//  src: url('/assets/fonts/avenirltce85heavy-webfont.eot'); /* IE9 Compat Modes */
+//  src: url('/assets/fonts/avenirltce85heavy-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('/assets/fonts/avenirltce85heavy-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('/assets/fonts/avenirltce85heavy-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: "Avenir-Book";
+//  src: url('/assets/fonts/avenirltce45book-webfont.eot'); /* IE9 Compat Modes */
+//  src: url('/assets/fonts/avenirltce45book-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('/assets/fonts/avenirltce45book-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('/assets/fonts/avenirltce45book-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: "Avenir-Light";
+//  src: url('/assets/fonts/avenirltce35light-webfont.eot'); /* IE9 Compat Modes */
+//  src: url('/assets/fonts/avenirltce35light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('/assets/fonts/avenirltce35light-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('/assets/fonts/avenirltce35light-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+//}
+//
+//@font-face {
+//  font-family: "Avenir-Roman";
+//  src: url('/assets/fonts/avenirltce55roman-webfont.eot'); /* IE9 Compat Modes */
+//  src: url('/assets/fonts/avenirltce55roman-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//  url('/assets/fonts/avenirltce55roman-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//  url('/assets/fonts/avenirltce55roman-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+//}
+
+
+@mixin Avenir-Black {
+  font-family: "Avenir-Black", sans-serif;
+  font-weight: bold;
+}
+
+@mixin Avenir-Roman {
+  font-family: "Avenir-Roman", sans-serif;
+}
+
+@mixin Avenir-Heavy {
+  font-family: "Avenir-Heavy", sans-serif;
+}
+
+@mixin Avenir-Light {
+  font-family: "Avenir-Light", sans-serif;
+}
+
+@mixin Avenir-Book {
+  font-family: "Avenir-Book", sans-serif;
+}
+
+$avenir: "Avenir-Black";
+
+$lead_font_size: 60px;
+$sub-lead_font_size: 50px;
+$work_caption_size: 35px;
+$bolder_font_size: 25px;
+$normal_font_size: 20px;
+$small_font_size: 16px;
+
+$dark_font_color: #1d1920;
+$light_font_color: #FFF;
+
+$beige: #F8F8F8;
+$loader_lightgrey: #E8E8E8;
+$lightgrey: #999;
+$loader_darkgrey: #4A4A4A;
+$dark_purple: #29222F;
+$graphite: #211C25;
+$purple: #6E00FF;
+
+$inner-width: 92%;
+
+
+

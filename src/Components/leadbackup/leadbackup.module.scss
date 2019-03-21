@@ -1,0 +1,71 @@
+@import "../../variables.module.scss";
+
+.lead_wrapper {
+  transition: height 1s;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background_media {
+  transition: background-color 1s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100%;
+}
+
+.lead_caption_container {
+  transition: opacity 1s;
+  position: relative;
+  height: 60vh;
+}
+
+.lead {
+  transition: opacity 1s;
+}
+
+.lead_caption_inner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom: 0;
+  height: calc(60vh - 100px);
+  max-width: 50%;
+  left: 10vw;
+}
+
+.black {
+  color: black !important;
+}
+
+.lead_title {
+  color: white;
+  font-size: 60px;
+  margin-bottom: 1rem;
+  white-space: pre-line;
+}
+
+.lead_description {
+  font-size: 20px;
+  color: white;
+  white-space: pre-line;
+}
+
+@media (max-width: 720px) {
+
+  .lead_caption_inner {
+    max-width: 70%;
+  }
+
+
+  .lead_title {
+    font-size: 48px;
+  }
+  .lead_description {
+    font-size: 18px;
+  }
+}

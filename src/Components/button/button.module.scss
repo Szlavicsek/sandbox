@@ -1,0 +1,14 @@
+@import "../../variables.module.scss";
+
+.button {
+  @include Avenir-Black;
+  position: relative;
+  display: block;
+  transition: all 0.3s;
+  padding: 15px 40px;
+  border: 1px solid;
+  border-radius: 30px;
+  font-size: 17px;
+  line-height: normal;
+  cursor: pointer;
+}

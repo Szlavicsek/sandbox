@@ -1,0 +1,180 @@
+@import "../../variables.module.scss";
+
+//**************************************************** POLICY BODY ****************************************************
+
+.policy {
+  width: 100%;
+  padding-top: 240px;
+  position: relative;
+  background-color: #fcfcfc;
+}
+
+.inner {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+.policy_header {
+  @include Avenir-Black;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #000;
+  font-size: 50px;
+}
+
+.title {
+  @include Avenir-Roman;
+  font-size: 20px;
+  color: #999;
+  margin-top: 50px;
+}
+
+.details {
+  @include Avenir-Roman;
+  font-size: 20px;
+  color: #000
+}
+
+.toggle_wrapper {
+  margin-top: 20px;
+}
+
+:global(#s1), :global(#s2), :global(#s3), :global(#s4), :global(#s5) {
+  display: none;
+}
+
+
+.toggle {
+  border: 1px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 52px;
+  background: #fff;
+  border-radius: 100px;
+  transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.toggle:before, .toggle:after {
+  position: absolute;
+  line-height: 50px;
+  font-size: 14px;
+  z-index: 2;
+  transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.toggle:before {
+  font-weight: bold;
+  content: "Enable";
+  left: 30px;
+  color: #fff;
+}
+.toggle:after {
+  font-weight: bold;
+  content: "Disable";
+  right: 26px;
+  color: #000;
+}
+
+.toggle_handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  background: #6e00ff;
+  width: 100px;
+  height: 44px;
+  border-radius: 100px;
+  top: 3px;
+  left: 3px;
+  transition: all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+input:checked + .toggle {
+  background: #fff;
+}
+input:checked + .toggle:before {
+  color: #000;
+}
+input:checked + .toggle:after {
+  color: #fff;
+}
+input:checked + .toggle .toggle_handler {
+  width: 100px;
+  -webkit-transform: translateX(92px);
+  transform: translateX(92px);
+  border-color: #fff;
+}
+
+//************************************************* works wrapper at the bottom
+
+.latest_works {
+  position: relative;
+  width: 92%;
+  margin: 150px auto;
+}
+
+.latest_works_title {
+  width: 90%;
+  margin: 0 auto 100px auto;
+}
+
+.works_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work_media_container {
+  position: relative;
+  width: 44vw;
+  height: 27vw;
+  overflow: hidden;
+}
+
+.work_media {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.work_title {
+  position: absolute;
+  color: $light_font_color;
+  font-size: $bolder_font_size;
+  left: 7%;
+  bottom: 15%;
+}
+
+
+.footer {
+  position: relative;
+  height: 35vh;
+  background-color: $dark_purple;
+}
+
+.link_wrapper {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.services_link {
+   display: block;
+   text-align: center;
+   color: $light_font_color;
+   font-size: 50px;
+ }
+
+.agency_link {
+  display: block;
+  text-align: center;
+  color: $light_font_color;
+  font-size: 20px;
+  margin-top: 20px;
+}
